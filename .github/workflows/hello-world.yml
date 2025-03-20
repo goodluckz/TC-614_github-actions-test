@@ -1,0 +1,23 @@
+name: Hello World Workflow
+
+on:
+  # Trigger on push to any branch
+  push:
+  # Also trigger on pull requests
+  pull_request:
+  # Optional: Allow manual trigger from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  hello-world:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print Hello World
+        run: echo "Hello World!"
+
+      - name: Print current date
+        run: date
+
+      - name: List workspace contents
+        run: ls -la
